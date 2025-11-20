@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Min Ting Tu - Personal Portfolio
 
-## Getting Started
+A modern, responsive, and interactive personal portfolio website built with Next.js, Tailwind CSS, and GSAP. This project showcases my work, skills, and experience as a Master of Computer Science student specializing in DevOps and Software Security.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [GSAP](https://greensock.com/gsap/) (GreenSock Animation Platform)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Icons:** Custom SVG Icons
+
+## ✨ Features
+
+- **Responsive Design:** Fully responsive layout that adapts to mobile, tablet, and desktop screens.
+- **Interactive UI:** Smooth scrolling, hover effects, and micro-interactions.
+- **Animations:**
+  - GSAP ScrollTrigger for reveal animations on scroll.
+  - Custom Particle Background effect.
+  - VS Code-style typing animation.
+- **Modular Architecture:** Component-based structure for easy maintenance and scalability.
+- **Data-Driven:** Content is separated from presentation, making it easy to update via `src/data/portfolioData.ts`.
+
+## 🛠️ Getting Started
+
+Follow these steps to run the project locally on your machine.
+
+### Prerequisites
+
+- Node.js (v18 or later recommended)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/personal-website.git
+   cd personal-website
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the site.
+
+## 📂 Project Structure
+
+```
+src/
+├── app/                # Next.js App Router pages and layout
+├── components/         # Reusable React components
+│   ├── icons/          # SVG Icon components
+│   └── ui/             # UI components (Header, ParticleBackground, etc.)
+├── data/               # Static data files (portfolio content)
+└── styles/             # Global styles
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📝 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To customize the content of the portfolio (skills, experience, projects, etc.), navigate to `src/data/portfolioData.ts` and update the exported constants.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Design Inspiration
 
-## Learn More
+The design is inspired by the "Brittany Chiang" aesthetic, featuring a dark navy background, teal accents, and a clean, monospaced font hierarchy.
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the [MIT License](LICENSE).
