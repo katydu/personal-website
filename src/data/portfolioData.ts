@@ -56,23 +56,47 @@ export const PROJECTS = [
         category: "DevOps",
         description: "Built a GitHub Actions pipeline with automated linting, testing, and Snyk security checks. Deployed to AWS EC2 using Docker and Ansible, integrated CloudFront CDN, and managed AWS-hosted PostgreSQL.",
         tech: ["AWS", "Docker", "Ansible", "GitHub Actions"],
-        github: "#", // Paste your GitHub Repo link here
+        github: "#",
         demo: null,
     },
     {
         title: "Taiwan Impact Platform",
-        category: "Frontend",
+        category: "Web",
         description: "Developed Taiwan's only cultural impact platform from scratch. Integrated nationwide data into a scalable React/TypeScript website hosted on Vercel to promote cultural preservation.",
         tech: ["React", "TypeScript", "Vercel", "Next.js"],
-        github: "#", // Paste your GitHub Repo link here
+        github: "#",
         demo: "#",
     },
     {
-        title: "Job Application System",
-        category: "Full Stack",
-        description: "Enhanced a job application platform by integrating job editing, AI-driven questionnaires, and a real-time chat room using React and MongoDB.",
-        tech: ["React", "JavaScript", "MongoDB", "AI Integration"],
-        github: "#", // Paste your GitHub Repo link here
+        title: "WolfJobs (NC State)",
+        category: "Open Source Contribution",
+        description: "An application streamlining job opportunities for students at NC State University, connecting students with on-campus and local employment.",
+        tech: ["React", "Node.js", "Express", "MongoDB"],
+        github: "https://github.com/katydu/WolfJobs",
+        demo: null,
+    },
+    {
+        title: "SlackBot Enhancement",
+        category: "Open Source Contribution",
+        description: "Enhanced Slackbot with NLP and AI for improved user interactions and automated responses.",
+        tech: ["Python", "Machine Learning", "NLP"],
+        github: "https://github.com/katydu/SlackBot-Enhancement",
+        demo: null,
+    },
+    {
+        title: "Galaxian Game",
+        category: "Game",
+        description: "A classic arcade-style game recreation built with modern web technologies.",
+        tech: ["JavaScript", "HTML5 Canvas", "CSS"],
+        github: "https://github.com/katydu/Galaxian-Game",
+        demo: null,
+    },
+    {
+        title: "MariaDB Implementation",
+        category: "DataBase",
+        description: "Database implementation and optimization project using MariaDB for large-scale data management.",
+        tech: ["MariaDB", "SQL", "Database Design"],
+        github: "https://github.com/katydu/MariaDB-Project",
         demo: null,
     }
 ];

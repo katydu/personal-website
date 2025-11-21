@@ -132,8 +132,24 @@ export default function Home() {
 
   const filteredProjects = useMemo(() => {
     if (projectFilter === 'All') return PROJECTS;
-    return PROJECTS.filter(p => p.category.includes(projectFilter) || (projectFilter === 'DevOps' && p.category.includes('DevOps')));
+    return PROJECTS.filter(p => p.category.includes(projectFilter));
   }, [projectFilter]);
+
+  useEffect(() => {
+    if (!gsapLoaded || !(window as any).gsap) return;
+    const gsap = (window as any).gsap;
+
+    // Animate list changes
+    gsap.fromTo(".project-card",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, overwrite: true }
+    );
+
+    // Refresh ScrollTrigger to ensure layout is correct
+    if ((window as any).ScrollTrigger) {
+      (window as any).ScrollTrigger.refresh();
+    }
+  }, [filteredProjects, gsapLoaded]);
 
   return (
     <div className="min-h-screen bg-[#0a192f] text-slate-400 font-sans selection:bg-teal-300 selection:text-[#0a192f]">
@@ -320,7 +336,7 @@ export default function Home() {
           <SectionHeader number="03" title="Things I've Built" />
 
           <div className="flex flex-wrap gap-4 mb-10 justify-center md:justify-start font-mono text-sm">
-            {['All', 'DevOps', 'Frontend', 'Full Stack'].map(filter => (
+            {['All', 'DevOps', 'Web', 'Game', 'Open Source Contribution', 'DataBase'].map(filter => (
               <button
                 key={filter}
                 onClick={() => setProjectFilter(filter)}
