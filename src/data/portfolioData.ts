@@ -12,7 +12,7 @@ export const SKILLS = {
     "Frontend": ["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "GSAP", "Ajax"],
     "Backend": ["Node.js", "ASP.NET", "PostgreSQL", "MongoDB", "Docker"],
     "DevOps / Tools": ["AWS", "Ansible", "Jenkins", "GitHub Actions", "Git", "VS Code"],
-    "Other": ["Software Security", "Algorithms", "Computer Networks"]
+    "Soft Skills": ["Communication", "Collaboration", "Problem Solving", "Teamwork", "Time Management"]
 };
 
 export const EXPERIENCE = [

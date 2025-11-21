@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { NAV_LINKS, SKILLS, EXPERIENCE, PROJECTS, EDUCATION } from '@/data/portfolioData';
 import {
   GithubIcon,
@@ -15,7 +15,8 @@ import {
   MenuIcon,
   XIcon,
   BookOpenIcon,
-  AwardIcon
+  AwardIcon,
+  UsersIcon
 } from '@/components/icons';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ParticleBackground from '@/components/ui/ParticleBackground';
@@ -171,10 +172,10 @@ export default function Home() {
         </nav>
 
         <div className="flex flex-col gap-6 text-slate-400 items-center">
-          <a href="https://github.com/your-username" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><GithubIcon size={20} /></a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><LinkedinIcon size={20} /></a>
+          <a href="https://github.com/katydu" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><GithubIcon size={20} /></a>
+          <a href="https://linkedin.com/in/min-ting-tu-68491b20b" target="_blank" rel="noreferrer" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><LinkedinIcon size={20} /></a>
           <a href="mailto:mtu@ncsu.edu" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><MailIcon size={20} /></a>
-          <a href="/resume.pdf" aria-label="Resume" className="flex flex-col items-center gap-1 hover:text-teal-300 hover:-translate-y-1 transition-all">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume" className="flex flex-col items-center gap-1 hover:text-teal-300 hover:-translate-y-1 transition-all">
             <FileTextIcon size={20} />
             <span className="text-[10px] font-mono uppercase tracking-wider">Resume</span>
           </a>
@@ -203,7 +204,7 @@ export default function Home() {
               {link.name}
             </button>
           ))}
-          <a href="#" className="mt-8 px-8 py-3 border border-teal-300 text-teal-300 rounded hover:bg-teal-300/10 transition-colors">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="mt-8 px-8 py-3 border border-teal-300 text-teal-300 rounded hover:bg-teal-300/10 transition-colors">
             Resume
           </a>
         </nav>
@@ -225,21 +226,21 @@ export default function Home() {
               Min Ting Tu.
             </h1>
             <h2 className="hero-desc text-slate-400 text-4xl md:text-6xl font-bold tracking-tight">
-              I build intelligent systems.
+              I build intelligent web applications.
             </h2>
             <p className="hero-desc max-w-xl mt-6 text-slate-400 text-lg leading-relaxed">
-              I'm a Master of Computer Science student at <span className="text-teal-300">NC State University</span> (GPA 3.72) specializing in <span className="text-teal-300">DevOps</span> and <span className="text-teal-300">Software Security</span>.
-              I build robust CI/CD pipelines and scalable web applications.
+              I'm a Master of Computer Science student at <span className="text-teal-300">NC State University</span> specializing in <span className="text-teal-300">Software Engineering</span> and <span className="text-teal-300">Software Security</span>.
+              I build web applications to solve real-world problems.
             </p>
             <div className="hero-btn pt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects') }} className="px-8 py-4 border border-teal-300 text-teal-300 font-mono rounded hover:bg-teal-300/10 transition-all duration-300 bg-[#0a192f]/50 backdrop-blur-sm">
                 Check out my work
               </a>
               <div className="flex items-center gap-6 text-slate-400">
-                <a href="https://github.com/your-username" target="_blank" rel="noreferrer" aria-label="Github" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><GithubIcon size={24} /></a>
-                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><LinkedinIcon size={24} /></a>
+                <a href="https://github.com/katydu" target="_blank" rel="noreferrer" aria-label="Github" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><GithubIcon size={24} /></a>
+                <a href="https://linkedin.com/in/min-ting-tu-68491b20b" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><LinkedinIcon size={24} /></a>
                 <a href="mailto:mtu@ncsu.edu" aria-label="Email" className="hover:text-teal-300 hover:-translate-y-1 transition-all"><MailIcon size={24} /></a>
-                <a href="/resume.pdf" aria-label="Resume" className="flex flex-col items-center gap-1 hover:text-teal-300 hover:-translate-y-1 transition-all">
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume" className="flex flex-col items-center gap-1 hover:text-teal-300 hover:-translate-y-1 transition-all">
                   <FileTextIcon size={24} />
                   <span className="text-xs font-mono">Resume</span>
                 </a>
@@ -265,7 +266,8 @@ export default function Home() {
                   {category === 'AI / ML' ? <CpuIcon size={20} className="text-teal-300" /> :
                     category === 'Backend' ? <DatabaseIcon size={20} className="text-teal-300" /> :
                       category === 'Frontend' ? <CodeIcon size={20} className="text-teal-300" /> :
-                        <TerminalIcon size={20} className="text-teal-300" />
+                        category === 'Soft Skills' ? <UsersIcon size={20} className="text-teal-300" /> :
+                          <TerminalIcon size={20} className="text-teal-300" />
                   }
                   <span className="group-hover:text-teal-300 transition-colors">{category}</span>
                 </h3>
@@ -419,8 +421,8 @@ export default function Home() {
           <p className="text-teal-300 font-mono mb-4">05. What's Next?</p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-200 mb-6">Get In Touch</h2>
           <p className="text-slate-400 text-lg leading-relaxed mb-12">
-            I'm currently looking for new opportunities to apply my research in a production environment.
-            Whether you have a question about my paper or just want to say hi, my inbox is always open.
+            I'm currently looking for internships and full-time positions.
+            Whether you have a question about my work or just want to say hi, my inbox is always open.
           </p>
           <a href="mailto:mtu@ncsu.edu" className="px-8 py-4 border border-teal-300 text-teal-300 font-mono rounded hover:bg-teal-300/10 transition-all duration-300 inline-block">
             Say Hello

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background with 10% opacity teal and rounded corners -->
+  <rect x="2" y="2" width="60" height="60" rx="8" fill="rgba(100, 255, 218, 0.1)" stroke="#64ffda" stroke-width="3" />
+  
+  <!-- The "M" Text -->
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="#64ffda" font-family="Courier New, monospace" font-weight="bold" font-size="36">M</text>
+</svg>
