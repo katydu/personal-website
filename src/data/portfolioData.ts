@@ -8,14 +8,27 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = {
-    "Languages": ["JavaScript", "Python", "SQL", "C#", "C++", "HTML/CSS"],
-    "Frontend": ["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "GSAP", "Ajax"],
-    "Backend": ["Node.js", "ASP.NET", "PostgreSQL", "MongoDB", "Docker"],
-    "DevOps / Tools": ["AWS", "Ansible", "Jenkins", "GitHub Actions", "Git", "VS Code"],
+    "Languages": ["JavaScript", "Python", "TypeScript", "SQL", "C#", "C++", "HTML/CSS"],
+    "Frontend": ["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "GSAP", "Ajax", "WebGL"],
+    "Backend & Database": ["Node.js", "ASP.NET", "PostgreSQL", "MongoDB"],
+    "DevOps / Tools": ["Docker", "AWS (EC2, S3, CloudFront)", "Ansible", "Jenkins", "GitHub Actions", "Git", "Selenium","Snyk"],
     "Soft Skills": ["Communication", "Collaboration", "Problem Solving", "Teamwork", "Time Management"]
 };
 
 export const EXPERIENCE = [
+    {
+        role: "Co-Founder/CTO",
+        company: "MeowTopia Inc.",
+        location: "Taoyuan, Taiwan",
+        period: "May 2025 - Now",
+        description: [
+            "Developed a full-stack cultural heritage platform using React and Next.js, implementing server-side rendering (SSR) and API routes to deliver exhibitions, events, long-form articles, and multimedia galleries with optimized performance and SEO.",
+            "Built an interactive browser-based 3D exhibition experience by embedding Unity WebGL builds into React components, enabling immersive cultural storytelling directly within the web application.",
+            "Led the entire software development lifecycle (SDLC) from concept to deployment, including requirement analysis, system architecture design, implementation, testing, iteration, and production release.",
+            "Architected the platform’s front-end, back-end, and data layer from scratch, selecting appropriate technologies and languages with consideration for scalability, maintainability, and performance.",
+            "Functioned as the primary point of contact for client communication and demand analysis, iteratively refining features based on user feedback and real-world usage."
+        ]
+    },
     {
         role: "Management Information System Intern",
         company: "YS-infoware",
@@ -52,20 +65,20 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
-        title: "DevOps CI/CD Pipeline",
-        category: "DevOps",
-        description: "Built a GitHub Actions pipeline with automated linting, testing, and Snyk security checks. Deployed to AWS EC2 using Docker and Ansible, integrated CloudFront CDN, and managed AWS-hosted PostgreSQL.",
-        tech: ["AWS", "Docker", "Ansible", "GitHub Actions"],
+        title: "Taiwan Impact Platform for Culture",
+        category: "Web",
+        description: "Developed Taiwan's only cultural impact platform from scratch. Integrated nationwide data into a scalable React/TypeScript website hosted on Vercel to promote cultural preservation.",
+        tech: ["React", "Next.js", "Tailwind CSS", "Unity", "TypeScript", "GSAP"],
         github: "#",
         demo: null,
     },
     {
-        title: "Taiwan Impact Platform",
-        category: "Web",
-        description: "Developed Taiwan's only cultural impact platform from scratch. Integrated nationwide data into a scalable React/TypeScript website hosted on Vercel to promote cultural preservation.",
-        tech: ["React", "TypeScript", "Vercel", "Next.js"],
+        title: "DevOps CI/CD Pipeline",
+        category: "DevOps",
+        description: "Automated the full release lifecycle by building a GitHub Actions pipeline that runs security checks with Snyk and provisions AWS infrastructure using Docker and Ansible for zero-touch deployments",
+        tech: ["AWS (EC2, S3, CloudFront)", "Docker", "Ansible", "GitHub Actions"],
         github: "#",
-        demo: "#",
+        demo: null,
     },
     {
         title: "WolfJobs (NC State)",
@@ -106,8 +119,8 @@ export const EDUCATION = [
         degree: "Master of Computer Science",
         school: "NC State University",
         year: "Expected May 2026",
-        details: "GPA: 3.72/4.0",
-        courses: ["Algorithms", "Database Management", "Software Engineering", "Software Security", "DevOps"]
+        details: "GPA: 3.81/4.0",
+        courses: ["Algorithms", "Database Management", "Software Engineering", "Software Security", "DevOps", "Computer Network"]
     },
     {
         degree: "B.S. Information Management",
